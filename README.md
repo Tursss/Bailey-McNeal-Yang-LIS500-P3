@@ -1,1 +1,1 @@
-# Bailey-McNeal-Yan-LIS500-P3
+# Bailey-McNeal-Yang-LIS500-P3

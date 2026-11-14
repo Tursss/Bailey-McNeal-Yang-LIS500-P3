@@ -158,3 +158,66 @@ footer {
     margin-top: 84px;
     line-height: 1.6;
 }
+
+/* Styling for the interactive p5.js canvases */
+
+.interactive-p5js {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    width: 100%;
+    margin: 70px auto 0;
+}
+
+.webcam,
+.results {
+    width: 416px;
+    text-align: center;
+}
+
+.webcam h3,
+.results h3 {
+    color: #D2F901;
+    font-family: monospace;
+    font-size: 18px;
+    letter-spacing: 1px;
+
+    margin: 0 0 12px;
+}
+
+/* p5 will insert a canvas inside each of these */
+.webcam-canvas,
+.results-canvas {
+    width: 416px;
+    height: 264px;
+    margin-bottom: 32px;
+}
+
+.webcam-canvas canvas,
+.results-canvas canvas {
+    display: block;
+    border-radius: 24px;
+}
+
+/* Placeholder background until p5 creates the canvas */
+.webcam-canvas {
+    background: #555555;
+    border-radius: 24px;
+}
+
+.results-canvas {
+    background: #555555;
+    border-radius: 24px;
+}
+
+.interactive-p5js-button {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    font-size: 12px;
+}
+
+.interactive-p5js-button .hero_button {
+    font-size: 12px;
+}

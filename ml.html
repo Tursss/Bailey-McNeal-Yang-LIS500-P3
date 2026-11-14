@@ -20,27 +20,33 @@
 
     <main class="main_content">
       <h1 class="page_title">Interactive Classifier</h1>
-      <p class="page_intro">Try the model with one of the four hand gestures and see how confident the prediction is</p>
+      <p class="page_intro">Try the model with one of the four hand gestures and see how confident the prediction is!</p>
+      <p class="page_intro">The model recognizes the following four hand gestures:<br>Open Hand✋, Thumbs-Up 👍, Thumbs-Down 👎, and the Peace Sign ✌️</p>
 
       <section class="project_section">
         <h2 class="section_title ml_title">How to Try It</h2>
         <ol class="section_text ml_text">
-          <li>lore ipsum dolor sit amet, consectetur adipiscing.</li>
-          <li>lore ipsum dolor sit amet, adipiscing elit.</li>
-          <li>lore ipsum dolor sit, consectetur adipiscing elit.</li>
-          <li>lore ipsum dolor sit amet, consectetur adipiscing elit.</li>
+          <li>Click the "Start Recognition" button below.</li>
+          <li>Enable webcam access if prompted.</li>
+          <li>Try making different hand gestures in front of the webcam.</li>
+          <li>See the model's predictions update in real-time.</li>
         </ol>
       </section>
 
       <section class="interactive-p5js">
-        <h3>Webcam</h3>
+        
         <div class="webcam">
-
+          <h3>Webcam</h3>
+          <div class="webcam-canvas"></div>
         </div>
-        <h3>Prediction</h3>
+        
         <div class="results">
-
+          <h3>Prediction</h3>
+          <div class="results-canvas"></div>
         </div>
+      </section>
+      <section class="interactive-p5js-button">
+        <a href="#" id="start-recognition" class="hero_button">Start Recognition</a>
       </section>
 
     </main>
@@ -50,5 +56,8 @@
         LIS 500 Code & Power · UW-Madison · 2026 · Shu-Fan Yang, Tanya McNeal & Spencer Bailey
       </p>
     </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.1/p5.min.js"></script>
+    <script src="https://unpkg.com/ml5@1/dist/ml5.min.js"></script>
+    <script src="./ml.js"></script>
   </body>
 </html>

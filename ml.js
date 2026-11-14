@@ -12,17 +12,17 @@ const modelURL = "https://teachablemachine.withgoogle.com/models/vkwnlSIHj/";
 // SETUP & LOAD MODEL
 
 function setup() {
-  noCanvas();
+    noCanvas();
 
-  // Load classifier
-  classifier = ml5.imageClassifier(modelURL + "model.json");
+    // Load classifier
+    classifier = ml5.imageClassifier(modelURL + "model.json");
 
-  createWebcamSketch();
+    createWebcamSketch();
 
-  createPredictionSketch();
+    createPredictionSketch();
 
-  // Start webcam when link is clicked
-  document.getElementById("start-recognition").addEventListener("click", startRecognition);
+    // Start webcam when link is clicked
+    document.getElementById("start-recognition").addEventListener("click", startRecognition);
 }
 
 // START WEBCAM
@@ -72,11 +72,11 @@ function stopRecognition() {
 
 function classifyVideo() {
 
-  if (!webcam || !recognizing) {
-    return;
-  }
+    if (!webcam || !recognizing) {
+        return;
+    }
 
-  classifier.classify(webcam, gotResults);
+    classifier.classify(webcam, gotResults);
 }
 
 function gotResults(results) {
@@ -118,91 +118,91 @@ function createWebcamSketch() {
             }
         };
     };
-  webcamSketch = new p5(sketch);
+    webcamSketch = new p5(sketch);
 }
 
 function createPredictionSketch() {
 
-  const sketch = (p) => {
+    const sketch = (p) => {
 
     p.setup = () => {
-      const canvas = p.createCanvas(416, 264);
+        const canvas = p.createCanvas(416, 264);
 
-      canvas.parent(
-        document.querySelector(".results-canvas")
-      );
+        canvas.parent(
+            document.querySelector(".results-canvas")
+        );
     };
 
     p.draw = () => {
-      p.background("#555555");
-      p.noStroke();
+        p.background("#555555");
+        p.noStroke();
 
-      // Top prediction
-      p.fill("#D2F901");
-      p.textAlign(p.CENTER);
-      p.textStyle(p.BOLD);
-      p.textSize(28);
-      p.text(label, p.width / 2, 48);
+        // Top prediction
+        p.fill("#D2F901");
+        p.textAlign(p.CENTER);
+        p.textStyle(p.BOLD);
+        p.textSize(28);
+        p.text(label, p.width / 2, 48);
 
-      // Top prediction confidence
-      if (predictions.length > 0) {
+        // Top prediction confidence
+        if (predictions.length > 0) {
         const confidence =
-          (predictions[0].confidence * 100).toFixed(1);
+            (predictions[0].confidence * 100).toFixed(1);
 
         p.fill("#FFFFFF");
         p.textSize(18);
 
         p.text(
-          `${confidence}% confidence`,
-          p.width / 2,
-          78
+            `${confidence}% confidence`,
+            p.width / 2,
+            78
         );
-      }
+        }
 
-      // Divider
-      p.stroke("#D2F901");
-      p.line(0, 105, p.width, 105);
-      p.noStroke();
+        // Divider
+        p.stroke("#D2F901");
+        p.line(0, 105, p.width, 105);
+        p.noStroke();
 
-      // All Predictions
-      p.fill("#FFFFFF");
-      p.textStyle(p.BOLD);
-      p.textSize(15);
+        // All Predictions
+        p.fill("#FFFFFF");
+        p.textStyle(p.BOLD);
+        p.textSize(15);
 
-      p.text(
+        p.text(
         "All Predictions",
         p.width / 2,
         139
-      );
+        );
 
-      // Prediction rows
-      p.textStyle(p.NORMAL);
-      p.textSize(14);
+        // Prediction rows
+        p.textStyle(p.NORMAL);
+        p.textSize(14);
 
-      predictions.forEach((prediction, index) => {
+        predictions.forEach((prediction, index) => {
 
         const y = 170 + (index * 22);
 
         const confidence =
-          (prediction.confidence * 100).toFixed(1);
+            (prediction.confidence * 100).toFixed(1);
 
         // Label
         p.textAlign(p.LEFT);
         p.text(
-          prediction.label,
-          110,
-          y
+            prediction.label,
+            110,
+            y
         );
 
         // Percentage
         p.textAlign(p.RIGHT);
         p.text(
-          `${confidence}%`,
-          306,
-          y
+            `${confidence}%`,
+            306,
+            y
         );
-      });
+        });
     };
-  };
-  resultsSketch = new p5(sketch);
+    };
+    resultsSketch = new p5(sketch);
 }

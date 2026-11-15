@@ -10,7 +10,6 @@ let recognizing = false;
 const modelURL = "https://teachablemachine.withgoogle.com/models/vkwnlSIHj/";
 
 // SETUP & LOAD MODEL
-
 function setup() {
 
     // Load classifier
@@ -94,7 +93,6 @@ function createWebcamSketch() {
     const sketch = (p) => {
 
         p.setup = () => {
-
             const canvas = p.createCanvas(416, 264);
             canvas.parent(document.querySelector(".webcam-canvas"));
         };
@@ -117,7 +115,6 @@ function createPredictionSketch() {
 
         p.setup = () => {
             const canvas = p.createCanvas(416, 264);
-
             canvas.parent(document.querySelector(".results-canvas"));
         };
 

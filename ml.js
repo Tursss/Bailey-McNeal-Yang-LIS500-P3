@@ -102,7 +102,13 @@ function createWebcamSketch() {
             p.background("#555555");
 
             if (webcam) {
+                p.push();
+
+                p.translate(p.width, 0);
+                p.scale(-1, 1);
+
                 p.image(webcam, 0, 0, p.width, p.height);
+                p.pop();
             }
         };
     };

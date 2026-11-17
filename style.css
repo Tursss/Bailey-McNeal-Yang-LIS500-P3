@@ -148,6 +148,20 @@ header {
     margin: 0 auto;
 }
 
+.video_container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.video_container iframe {
+  width: 100%;
+  max-width: 996px;
+  aspect-ratio: 16 / 9;
+  height: auto;
+  border: none;
+}
+
 footer {
     width: 100%;
     font-weight: 500;
@@ -215,9 +229,9 @@ footer {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    font-size: 12px;
+    font-size: 14px;
 }
 
 .interactive-p5js-button .hero_button {
-    font-size: 12px;
+    font-size: 14px;
 }

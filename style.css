@@ -143,6 +143,15 @@ header {
     margin-bottom: 20px;
 }
 
+.link_text {
+    color: #D2F901;
+    text-decoration: none;
+}
+
+.link_text:hover {
+    text-decoration: underline;
+}
+
 .ml_text {
     width: fit-content;
     margin: 0 auto;

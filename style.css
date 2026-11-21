@@ -7,8 +7,8 @@
 body {
     font-family: 'Inter', sans-serif;
     font-weight: 400;
-    color: #F5F5F5;
-    background-color: #0D0D0D;
+    color: #E0E0E0;
+    background-color: #121212;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -23,14 +23,20 @@ header {
     gap: 16px;
     font-family: 'JetBrains Mono', monospace;
     letter-spacing: 0.5px;
-    padding: 32px;
+    padding: 24px 32px;
     margin: 0 auto;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: rgba(18, 18, 18, 0.85);
 }
 
 .header_title {
     font-size: 24px;
     font-weight: 700;
     color: #D2D2D2;
+    cursor: default;
 }
 
 .header_link {
@@ -43,6 +49,12 @@ header {
 
 .header_link:hover {
     color: #D2F901;
+}
+
+.active {
+    color: #D2F901;
+    pointer-events: none;
+    cursor: default;
 }
 
 .main_content {
@@ -117,7 +129,7 @@ header {
 
 .hero_button:hover {
     background-color: #D2F901;
-    color: #0D0D0D;
+    color: #121212;
 }
 
 .project_section {

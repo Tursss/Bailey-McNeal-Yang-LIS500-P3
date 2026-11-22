@@ -113,10 +113,9 @@ function createWebcamSketch() {
             else {
                 p.fill("#D2F901");
                 p.noStroke();
-                p.textAlign(p.CENTER, p.CENTER);
+                p.textAlign(p.CENTER);
                 p.textStyle(p.BOLD);
                 p.textSize(28);
-
                 p.text("Waiting for webcam...", p.width / 2, 48);
             }
         };

@@ -117,11 +117,7 @@ function createWebcamSketch() {
                 p.textStyle(p.BOLD);
                 p.textSize(28);
 
-                p.text(
-                    "Waiting for webcam...",
-                    p.width / 2,
-                    p.height / 2
-                );
+                p.text("Waiting for webcam...", p.width / 2, 48);
             }
         };
     };

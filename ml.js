@@ -110,6 +110,19 @@ function createWebcamSketch() {
                 p.image(webcam, 0, 0, p.width, p.height);
                 p.pop();
             }
+            else {
+                p.fill("#D2F901");
+                p.noStroke();
+                p.textAlign(p.CENTER, p.CENTER);
+                p.textStyle(p.BOLD);
+                p.textSize(28);
+
+                p.text(
+                    "Waiting for webcam...",
+                    p.width / 2,
+                    p.height / 2
+                );
+            }
         };
     };
     webcamSketch = new p5(sketch);

@@ -1,0 +1,3 @@
+# Prevents downloading full image folder when running a git pull.
+
+dataset/

@@ -108,8 +108,6 @@ function createWebcamSketch() {
             if (webcam) {
                 p.push();
 
-                p.imageMode(p.CORNER);
-
                 p.translate(p.width, 0);
                 p.scale(-1, 1);
 
@@ -117,9 +115,8 @@ function createWebcamSketch() {
                 p.pop();
             }
             else {
-                p.imageMode(p.CENTER);
-
-                p.image(webcamIcon, p.width / 2, p.height / 2, 64, 64);
+                const iconSize = 64;
+                p.image(webcamIcon, (p.width - iconSize) / 2, (p.height - iconSize) / 2, iconSize, iconSize);
             }
         };
     };

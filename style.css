@@ -25,7 +25,7 @@ header {
     letter-spacing: 0.5px;
     padding: 24px 32px;
     margin: 0 auto;
-    position: sticky;
+    position: sticky; /* Keep the navigation visible while users scroll through the page */
     top: 0;
     left: 0;
     z-index: 1000;
@@ -51,12 +51,14 @@ header {
     color: #D2F901;
 }
 
+/* Highlight the current page and prevent the active link from being clicked again */
 .active {
     color: #D2F901;
     pointer-events: none;
     cursor: default;
 }
 
+/* Keep the main content centered and limit the width on larger screens */
 .main_content {
     width: 100%;
     max-width: 1200px;
@@ -175,6 +177,7 @@ header {
     justify-content: center;
 }
 
+/* Keep the embedded video responsive while maintaining a 16:9 ratio */
 .video_container iframe {
   width: 100%;
   max-width: 996px;

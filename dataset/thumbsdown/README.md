@@ -1,1 +1,0 @@
-Thumbs Down Training Images 

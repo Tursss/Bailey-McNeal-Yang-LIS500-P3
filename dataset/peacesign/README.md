@@ -1,1 +1,0 @@
-Peace Sign Training Images 
